@@ -1,0 +1,289 @@
+/*--estilo.css--*/
+/*A -> alteração
+  Add -> conteúdo adicionado 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Calibri;
+    font-size: 14px;
+} /*Add A*/
+
+html, body {
+    height: 100%; /* Define a altura total da página */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #menu_perfil img {
+        height: 40px; /* Diminui a altura da imagem no menu */
+        width: 40px;  /* Diminui a largura da imagem no menu */
+    }
+}
+
+#todoss{
+    margin-top: 60px;
+}
+
+/*--Configuração da Seção topo do site--*/
+#topo {
+    width: 100%;
+    height: 400px;
+    background-color: #777;
+    position: relative;
+}
+
+#topo figure {
+    margin: 220px 42.5% auto;
+    position: relative;
+    z-index: 10;
+}
+
+#topo figure img {
+    width: 150px;
+    height: auto;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+#topo header {
+    width: 100%;
+    position: absolute;
+    margin-top: 120px;
+}
+
+#topo header h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #FFF;
+}
+
+/*--Configuração do ícone da câmera - primeira lista*/
+#foto {
+    list-style: none;
+    position: absolute;
+    top: -10px;
+    left: 0;
+}
+
+#foto li {
+    position: relative;
+}
+
+#foto li #cam {
+    width: 50px;
+    height: auto;
+    transition: 0.2s;
+    position: relative;
+    z-index: 10;
+}
+
+#foto li:hover #cam {
+    width: 55px;
+}
+
+/*--Submenu ao passar o mouse sobre a imagem--*/
+#foto li ul {
+    z-index: 10;
+    display: none;
+    list-style: none;
+    position: absolute;
+    background-color: #999;
+    width: 160px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#foto li:hover ul {
+    display: block;
+}
+
+#foto li ul li {
+    color: #777;
+    padding: 10px 20px;
+    margin: 2px 1px;
+    background-color: #FFF;
+    border-radius: 5px;
+}
+
+#foto li ul li:hover {
+    color: #FFF;
+    background-color: #555;
+}
+
+/* Link do submenu */
+#itens_menu li a {
+    text-decoration: none;
+    color: #0AF;
+    padding: 10px 12px;
+}
+
+#itens_menu li a:hover {
+    color: #333;
+}
+
+/*--Configuração da navegação do menu fixo--*/
+#menu_perfil {
+    width: 100%;
+    height: 70px; /* Altura fixa do menu */
+    background-color: #ffffff;
+    position: fixed; /* Menu fixo no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Certifica-se de que o menu está acima de tudo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#menu_perfil a {
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#menu_perfil .perfil-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Certifica-se de que a imagem do perfil está alinhada à direita */
+    margin-left: auto; /* Empurra o container para o final do menu */
+}
+
+#menu_perfil img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+
+/*--Configuração de container do perfil--*/
+#perfil_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 100px;
+}
+
+#perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+/*--Estilo do menu do perfil que aparece abaixo da imagem--*/
+#menu_foto {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+    padding: 10px;
+}
+
+#perfil_container:hover #menu_foto {
+    display: block;
+}
+
+/*--Estilo do conteúdo principal do site--*/
+#principal {
+    padding-top: 60px;
+    max-width: 1200px;
+    min-height: 800px;
+    margin: 0 auto;
+    background-color: #0AF;
+}
+
+h1, .dados, .posts {
+    margin-left: 20px;
+}
+
+/*--Estilo dos ícones das postagens--*/
+.img_posts {
+    height: 25px;
+    width: auto;
+    margin: 2px;
+    transition: 0.3s;
+    opacity: 0.7;
+}
+
+.img_posts:hover {
+    opacity: 1;
+}
+
+/*--Conteúdo--*/
+#conteudo {
+    flex: 1; /* Para o rodapé funcionar corretamente */
+    padding-top: 70px; /* Mesma altura do menu */
+    padding: 20px; /* Espaçamento interno opcional */
+}
+
+/*--Formulário--*/
+#form {
+    width: 500px;
+    min-height: 240px;
+    margin: 15% auto;
+    background-color: #0AF;
+    position: relative;
+    overflow: hidden;
+}
+
+#form a {
+    float: left;
+    position: absolute;
+    right: 5%;
+    bottom: 5px;
+    text-decoration: none;
+}
+
+#form a:hover {
+    text-decoration: underline;
+}
+
+.entradas {
+    width: 90%;
+    height: 45px;
+    float: left;
+    margin: 5px 5%;
+}
+
+label {
+    float: left;
+    margin: 1% 5%;
+}
+
+.bt_form {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+}
+
+/*--Rodapé--*/
+#rodape {
+    background-color: #222; /* Cor de fundo do rodapé */
+    color: #999; /* Cor do texto */
+    text-align: center;
+    padding: 10px 0; /* Espaçamento interno */
+    width: 100%; /* Garante que o rodapé tenha largura total */
+}
+
+#rodape footer p {
+    text-align: center;
+    margin: 40px 0;
+    color: #999;
+}
+
+

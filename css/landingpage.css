@@ -1,0 +1,33 @@
+#logo{
+position: absolute;
+width: 64px;
+height: 81px;
+left: 22px;
+top: 19px;
+
+background: url(SYMBOLPCM.png);
+}
+#header{
+	height:92px; 
+	background:#fff url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/header-icons.png") 1448px -2px no-repeat;
+	border-bottom:1px solid #eee;
+}
+#header ul{padding:33px 0 0 45px;}
+#header li{
+	list-style:none;
+	float:left;
+	margin-right:30px;
+    padding-left: 1cm;	
+}
+#header li a{
+	font-weight:700;
+	color:#333;
+	font-size:14px;	
+	text-decoration:none;
+	text-transform:uppercase;
+	letter-spacing:1px;
+}
+#headerli a:hover{
+	color:#000;
+	cursor:pointer;
+}
